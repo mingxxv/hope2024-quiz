@@ -30,27 +30,26 @@ export default function QuizApp() {
   };
 
   return (
-    <div className="min-h-screen bg-black flex items-center justify-center">
-      <div className="w-full flex flex-col items-center gap-6">
-        <div className="w-[600px]">
-          <ProgressBar 
-            current={currentQuestion} 
-            total={questions.length} 
-          />
-        </div>
-        {showResult ? (
-          <ResultCard 
-            result={calculateResult(answers)} 
-            onReset={resetQuiz} 
-          />
-        ) : (
-          <QuestionCard
-            key={currentQuestion}
-            question={questions[currentQuestion]}
-            onAnswer={handleAnswer}
-          />
-        )}
+    <main className="min-h-screen bg-black flex flex-col items-center justify-center p-4">
+      <div className="w-full max-w-[430px]">
+        <ProgressBar 
+          current={currentQuestion} 
+          total={questions.length} 
+        />
       </div>
-    </div>
+      
+      {showResult ? (
+        <ResultCard 
+          result={calculateResult(answers)} 
+          onReset={resetQuiz} 
+        />
+      ) : (
+        <QuestionCard
+          key={currentQuestion}
+          question={questions[currentQuestion]}
+          onAnswer={handleAnswer}
+        />
+      )}
+    </main>
   );
 }

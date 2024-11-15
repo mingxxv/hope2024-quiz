@@ -1,29 +1,56 @@
 import React from 'react';
+import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 
 export const QuestionCard = ({ question, onAnswer }) => {
+  const isTransitionScene = question.options.length === 1 && question.options[0].text === "Next";
+
   return (
-    <div className="relative w-[600px] h-[800px] mx-auto rounded-lg">
-      <div className="absolute inset-0">
+    <div className="relative mx-auto w-full max-w-[430px] aspect-[430/932]">
+      {/* Background Image Layer */}
+      <div className="absolute inset-0" style={{ zIndex: 0 }}>
         <Image
-          src={`/images/q${question.id}.jpg`}
+          src={`/images/s${question.id}.png`}
           alt={`Question ${question.id} background`}
-          width={600}
-          height={800}
-          className="object-cover rounded-lg"
+          fill
+          className="object-cover"
           priority
         />
       </div>
-      <div className="absolute bottom-6 left-6 right-6 space-y-3 z-10">
-        {question.options.map((option, index) => (
-          <button
-            key={index}
-            onClick={() => onAnswer(option.score)}
-            className="option-button w-full p-4 text-left flex items-center justify-between group transition-colors text-xl hover:bg-[#1B4332]/80"
-          >
-            <span>{option.text}</span>
-          </button>
-        ))}
+
+      {/* Buttons Layer */}
+      <div 
+        style={{
+          position: 'absolute',
+          top: '70%',
+          left: 0,
+          right: 0,
+          zIndex: 9999,
+          padding: '1.5rem'
+        }}
+      >
+        <div className="space-y-4">
+          {question.options.map((option, index) => (
+            <button
+              key={index}
+              onClick={() => onAnswer(option.score)}
+              style={{
+                position: 'relative',
+                zIndex: 9999
+              }}
+              className={`option-button w-full p-5 text-left flex items-center justify-between group transition-colors text-xl
+                ${isTransitionScene ? 'justify-center' : ''}`}
+            >
+              <span className="text-base sm:text-lg">{option.text}</span>
+              {!isTransitionScene && (
+                <ChevronRight 
+                  className="text-white"
+                  size={20} 
+                />
+              )}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );

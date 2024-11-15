@@ -80,11 +80,25 @@ export const questions = [
     ]
   },
   {
+    id: "10a", // Transition scene
+    text: "She explains that she saw you come to life. She has been watching over your escape because she was interested to see who you are.",
+    options: [
+      { text: "Next", score: "transition" }
+    ]
+  },
+  {
     id: 11,
     text: "As she explains, more questions form in your head",
     options: [
       { text: "Observing me seems weird....", score: "T" },
       { text: "It's lowkey nice to know that someone has been looking over me!", score: "F" }
+    ]
+  },
+  {
+    id: "11a", // Transition scene
+    text: "She then holds out two things for you, an orb and a mysterious envelope.",
+    options: [
+      { text: "Next", score: "transition" }
     ]
   },
   {
