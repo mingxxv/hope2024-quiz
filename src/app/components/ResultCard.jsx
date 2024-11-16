@@ -17,6 +17,10 @@ export const ResultCard = ({ result, onReset }) => {
         <button
           onClick={onReset}
           className="option-button"
+          style={{
+            position: 'relative',
+            zIndex: 9999
+          }}
         >
           <RotateCcw size={20} />
           Try Again
