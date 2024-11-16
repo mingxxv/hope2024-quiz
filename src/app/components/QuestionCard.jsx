@@ -22,14 +22,24 @@ export const QuestionCard = ({ question, onAnswer }) => {
       <div 
         style={{
           position: 'absolute',
-          top: '70%',
           left: 0,
           right: 0,
           zIndex: 9999,
-          padding: '1.5rem'
+          padding: '1.5rem',
+          ...(isTransitionScene 
+            ? { 
+                top: '50%', 
+                transform: 'translateY(-50%)',
+                display: 'flex',
+                justifyContent: 'center'
+              } 
+            : { 
+                top: '70%' 
+              }
+          )
         }}
       >
-        <div className="space-y-4">
+        <div className={`${isTransitionScene ? 'w-full flex justify-center' : 'space-y-4'}`}>
           {question.options.map((option, index) => (
             <button
               key={index}
@@ -38,10 +48,14 @@ export const QuestionCard = ({ question, onAnswer }) => {
                 position: 'relative',
                 zIndex: 9999
               }}
-              className={`option-button w-full p-5 text-left flex items-center justify-between group transition-colors text-xl
-                ${isTransitionScene ? 'justify-center' : ''}`}
+              className={`option-button p-5 text-xl transition-colors
+                ${isTransitionScene 
+                  ? 'w-[80%] p-8 text-center text-2xl font-bold justify-center' 
+                  : 'w-full text-left flex items-center justify-between'}`}
             >
-              <span className="text-base sm:text-lg">{option.text}</span>
+              <span className={`${isTransitionScene ? 'text-2xl' : 'text-base sm:text-lg'}`}>
+                {option.text}
+              </span>
               {!isTransitionScene && (
                 <ChevronRight 
                   className="text-white"
