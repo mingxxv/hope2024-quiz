@@ -13,4 +13,15 @@
   font-family: var(--font-fafo), 'Answers';
   border-radius: 30px;
   border: 2px solid #FFFFFF;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1.25rem 2rem;
+  font-size: 1.25rem;
+  line-height: 1;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 4rem;
 }

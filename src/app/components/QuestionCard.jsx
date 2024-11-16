@@ -29,7 +29,7 @@ export const QuestionCard = ({ question, onAnswer }) => {
           padding: '1.5rem',
           ...(isTransitionScene 
             ? { 
-                top: '50%', 
+                top: '85%', 
                 transform: 'translateY(-50%)',
                 display: 'flex',
                 justifyContent: 'center'
