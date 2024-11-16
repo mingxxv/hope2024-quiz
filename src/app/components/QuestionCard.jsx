@@ -15,6 +15,7 @@ export const QuestionCard = ({ question, onAnswer }) => {
           fill
           className="object-cover"
           priority
+          objectFit='cover'
         />
       </div>
 

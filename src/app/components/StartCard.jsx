@@ -12,8 +12,30 @@ export const StartCard = ({ onStart }) => {
           fill
           className="object-cover pointer-events-none select-none"
           priority
+          objectFit='cover'
         />
       </div>
+
+       {/* Title Content */}
+       <div 
+       className="text-center space-y-8 mb-12"
+       style={{
+        position: 'absolute',
+        top: '40%',
+        left: 0,
+        right: 0,
+        zIndex: 9999,
+        padding: '1.5rem'
+      }}>
+          <h1 className="text-[#8B0000] text-3xl sm:text-4xl leading-relaxed"
+            style={{ fontFamily: 'var(--font-fafo)' }}>
+            FIND YOUR GINGERBREAD PERSONALITY
+          </h1>
+          <p className="text-xl sm:text-2xl text-[#8B0000]"
+            style={{ fontFamily: 'var(--font-fafo)' }}>
+            ESCAPE THE BAKER'S OVEN TO FIND OUT
+          </p>
+        </div>
 
       {/* Button Container */}
       <div 
@@ -26,15 +48,6 @@ export const StartCard = ({ onStart }) => {
           padding: '1.5rem'
         }}
       >
-        {/* Title Content */}
-        <div className="text-center space-y-8 mb-12">
-          <h1 className="text-4xl font-bold text-[#8B0000] whitespace-pre-line leading-relaxed">
-            FIND YOUR GINGERBREAD PERSONALITY
-          </h1>
-          <p className="text-2xl text-[#8B0000]">
-            ESCAPE THE BAKER'S OVEN TO FIND OUT
-          </p>
-        </div>
         
         {/* Start Button */}
         <button
@@ -43,9 +56,9 @@ export const StartCard = ({ onStart }) => {
             position: 'relative',
             zIndex: 9999
           }}
-          className="option-button w-[80%] mx-auto p-8 text-center text-2xl font-bold hover:bg-[#1B4332]/80 transition-colors block"
+          className="option-button w-[80%] mx-auto text-center text-2xl font-bold hover:bg-[#1B4332]/80 transition-colors block"
         >
-          START
+          <span className="block px-8 py-6">START</span>
         </button>
       </div>
     </div>
