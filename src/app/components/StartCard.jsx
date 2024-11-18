@@ -10,7 +10,7 @@ export const StartCard = ({ onStart }) => {
           src="/images/start.jpg"
           alt="Start screen background"
           fill
-          className="object-cover pointer-events-none select-none"
+          className="pointer-events-none select-none"
           priority
           objectFit='cover'
         />

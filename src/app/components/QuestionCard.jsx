@@ -11,9 +11,8 @@ export const QuestionCard = ({ question, onAnswer }) => {
       <div className="absolute inset-0" style={{ zIndex: 0 }}>
         <Image
           src={`/images/s${question.id}.png`}
-          alt={`Question ${question.id} background`}
+          alt={`Loading, please wait...`}
           fill
-          className="object-cover"
           priority
           objectFit='cover'
         />
