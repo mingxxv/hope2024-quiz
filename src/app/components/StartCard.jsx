@@ -27,11 +27,11 @@ export const StartCard = ({ onStart }) => {
         zIndex: 9999,
         padding: '1.5rem'
       }}>
-          <h1 className="text-[#8B0000] text-3xl sm:text-4xl leading-relaxed"
+          <h1 className="text-[#8B0000] text-4xl sm:text-4xl leading-relaxed"
             style={{ fontFamily: 'var(--font-fafo)' }}>
             FIND YOUR GINGERBREAD PERSONALITY
           </h1>
-          <p className="text-xl sm:text-2xl text-[#8B0000]"
+          <p className="text-xl sm:text-3xl text-[#8B0000]"
             style={{ fontFamily: 'var(--font-fafo)' }}>
             ESCAPE THE BAKER'S OVEN TO FIND OUT
           </p>

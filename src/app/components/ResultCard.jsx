@@ -10,7 +10,7 @@ export const ResultCard = ({ result, onReset }) => {
           src={`/images/types/${result}.jpg`}
           alt={`${result} personality type`}
           fill
-          objectFit='contain  '
+          objectFit='contain'
         />
       </div>
       <div className="bg-white rounded-b-lg shadow-lg p-6">
