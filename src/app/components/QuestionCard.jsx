@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 import { ChevronRight } from 'lucide-react';
 import Image from 'next/image';
@@ -10,11 +11,11 @@ export const QuestionCard = ({ question, onAnswer }) => {
       {/* Background Image Layer */}
       <div className="absolute inset-0" style={{ zIndex: 0 }}>
         <Image
-          src={`/images/s${question.id}.png`}
+          src={`/images/s${question.id}.webp`}
           alt={`Loading, please wait...`}
           fill
           priority
-          objectFit='cover'
+          objectFit='contain'
         />
       </div>
 
