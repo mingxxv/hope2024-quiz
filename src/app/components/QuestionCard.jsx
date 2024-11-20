@@ -35,7 +35,7 @@ export const QuestionCard = ({ question, onAnswer }) => {
                 justifyContent: 'center'
               } 
             : { 
-                top: '70%' 
+                top: '66%' 
               }
           )
         }}
@@ -57,12 +57,6 @@ export const QuestionCard = ({ question, onAnswer }) => {
               <span className={`${isTransitionScene ? 'text-2xl' : 'text-base sm:text-lg'}`}>
                 {option.text}
               </span>
-              {!isTransitionScene && (
-                <ChevronRight 
-                  className="text-white"
-                  size={20} 
-                />
-              )}
             </button>
           ))}
         </div>
