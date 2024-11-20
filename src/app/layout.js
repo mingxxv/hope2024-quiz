@@ -20,7 +20,7 @@ const fafoSans = localFont({
 
 export const metadata = {
   title: "Gingerbread Quiz",
-  description: "A work of ❤️ from Indigitous SG x Hope SG",
+  description: "A work of ❤️ from Hope SG x Indigitous SG",
 };
 
 export default function RootLayout({ children }) {
