@@ -2,7 +2,7 @@
 
 An interactive personality quiz app built with Next.js that determines your MBTI type through a gingerbread-themed story.
 
-A work of ❤️ from (Hope SG)[https://www.hopesingapore.org.sg/] x (Indigitous SG)[https://www.indigitous.sg/]
+A work of ❤️ from [Hope SG](https://www.hopesingapore.org.sg/) x [Indigitous SG](https://www.indigitous.sg/).
 
 ## Setup
 
