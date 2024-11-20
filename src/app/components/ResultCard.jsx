@@ -8,7 +8,7 @@ export const ResultCard = ({ result, onReset }) => {
     <div className="relative mx-auto w-full max-w-[430px] aspect-[430/932]">
       <div className="absolute inset-0" style={{ zIndex: 0 }}>
         <Image
-          src={`/images/types/${result}.jpg`}
+          src={`/images/types/${result}.webp`}
           alt={`${result} personality type`}
           fill
           className="pointer-events-none select-none"
@@ -20,7 +20,7 @@ export const ResultCard = ({ result, onReset }) => {
       <div 
         style={{
           position: 'absolute',
-          top: '2%',
+          top: '68%',
           left: 0,
           right: 0,
           zIndex: 9999,
@@ -40,7 +40,7 @@ export const ResultCard = ({ result, onReset }) => {
       <div 
         style={{
           position: 'absolute',
-          top: '8%',
+          top: '75%',
           left: 0,
           right: 0,
           zIndex: 9999,
