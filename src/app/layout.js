@@ -1,4 +1,5 @@
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 
 const geistSans = localFont({
@@ -26,10 +27,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>Gingerbread Quiz</title>
+        <meta name="description" content="A work of ❤️ from Hope SG x Indigitous SG"></meta>
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${fafoSans.variable} antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
